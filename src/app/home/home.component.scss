@@ -1,0 +1,118 @@
+/* Existing responsive styles */
+  .rs-menu {
+display: flex;
+justify-content: flex-end;
+padding: 10px;
+flex-direction: row;
+flex-wrap: wrap;
+}
+
+.nav-menu {
+list-style: none;
+display: flex;
+gap: 20px;
+padding: 0;
+margin: 0;
+}
+
+.nav-menu li {
+position: relative;
+}
+
+.nav-menu li a {
+text-decoration: none;
+color: #333;
+padding: 10px 15px;
+display: block;
+transition: background 0.3s ease;
+}
+
+.nav-menu li a:hover {
+background:none;
+}
+
+/* Submenu styles */
+.sub-menu {
+display: none;
+position: absolute;
+background-color: white;
+top: 100%;
+left: 0;
+list-style: none;
+padding: 10px;
+min-width: 200px;
+box-shadow: 0 0 10px rgba(0,0,0,0.1);
+z-index: 100;
+}
+
+.menu-item-has-children:hover > .sub-menu {
+display: block;
+}
+
+/* Toggle Button */
+.menu-toggle {
+display: none;
+font-size: 24px;
+background: none;
+border: none;
+padding: 10px;
+cursor: pointer;
+}
+
+/* Responsive styles for screens under 1420px */
+@media (max-width: 1420px) {
+.menu-toggle {
+display: block;
+margin: 10px;
+align-self: flex-end;
+color: white;
+}
+
+.rs-menu {
+display: none;
+flex-direction: column;
+width: 100%;
+background-color: #58595f; /* Mobile menu background /
+align-items: flex-end; / Align menu to the right */
+}
+
+.rs-menu.open {
+display: flex;
+}
+
+.nav-menu {
+flex-direction: column;
+align-items: flex-end; /* Align each menu item to the right */
+gap: 0;
+width: 100%;
+}
+
+.nav-menu li {
+width: auto;
+text-align: right;
+}
+
+.nav-menu li a {
+color: white;
+padding: 10px 20px;
+}
+
+.sub-menu {
+position: static;
+box-shadow: none;
+background: #f0f0f0;
+padding-left: 20px;
+}
+
+.sub-menu li a {
+color: #333;
+}
+}
+
+.nav-item a{
+  color:white;
+}
+.navbar-nav .dropdown-menu {
+    position: static;
+    background: black !important; 
+}
