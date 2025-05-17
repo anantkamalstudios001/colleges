@@ -116,3 +116,26 @@ color: #333;
     position: static;
     background: black !important; 
 }
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    color: #ffffff;
+}
+
+.navbar-nav .dropdown-menu {
+  position: absolute;
+  z-index: 1000;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dropdown-menu {
+  text-align: left;
+}
+
+.navbar-nav .nav-link {
+  height: 70px;
+  line-height: 70px;
+  padding-top: 0;
+  padding-bottom: 0;
+  // font-size:18px;
+}
